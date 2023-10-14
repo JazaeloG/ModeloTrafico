@@ -6,6 +6,15 @@ model = joblib.load("models/traffic_model.joblib")
 
 app = FastAPI()
 
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"])
+
 class InputData(BaseModel):
     DateTime: str 
     Junction: int
