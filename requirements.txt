@@ -4,4 +4,5 @@ uvicorn>=0.15.0,<0.16.0
 numpy==1.23.3
 scikit-learn
 joblib==1.1.0
-pandas
+pandas==1.4.4
+python-multipart==0.0.5
