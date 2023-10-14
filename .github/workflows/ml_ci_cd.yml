@@ -16,9 +16,9 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
       - name: download dataset
-        run: wget -O data/heart.csv ${{github.event.client_payload.dataseturl}}
+        run: wget -O data/traffic.csv ${{github.event.client_payload.dataseturl}}
       - name: cat dataset
-        run: cat data/heart.csv
+        run: cat data/traffic.csv
       - name: Entrenar modelo de Machine Learning
         run: python model/train.py
       - name: Constuir Imagen Docker
